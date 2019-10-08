@@ -1,12 +1,12 @@
 const mongoose=require("mongoose")
 
-mongoose.connect("mongodb://localhost:27017/node-mongoapi",{ useNewUrlParser: true,useUnifiedTopology: true,useCreateIndex: true,},(error)=>{
+mongoose.connect("mongodb://deep:7068125692dc@ds233763.mlab.com:33763/cake",{ useNewUrlParser: true,useUnifiedTopology: true,useCreateIndex: true,},(error)=>{
     mongoose.Promise = global.Promise;
 if(!error){
-console.log("connection succeded")
+console.log("DB connected.")
 }
 else{
-    console.log("connection failed")
+    console.log("DB connection failed.")
 }
 })
 

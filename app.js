@@ -24,11 +24,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // global error handler
 app.use(errorHandler);
 
-// app.use('/', (req, res, next) => {
-//   const _path = path.join(__dirname, '../dist/cake', 'index.html');
-//   // console.log('--------', _path);
-//   res.sendFile(_path);
-// });
+app.get('/', (req, res, next) => {
+  // const _path = path.join(__dirname, '../dist/cake', 'index.html');
+  // console.log('--------', _path);
+  res.end("hello.");
+});
 
 app.use('/news', require('./controllers/news.controller'));
 app.use('/offers', require('./controllers/offers.controller'));
